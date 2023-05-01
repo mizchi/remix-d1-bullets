@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1682755917462,
+      "tag": "0000_acoustic_doorman",
+      "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1682781415054,
+      "tag": "0001_cuddly_squadron_supreme",
+      "breakpoints": false
+    }
+  ]
+}
