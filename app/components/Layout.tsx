@@ -8,6 +8,8 @@ export function Layout(props: { children: React.ReactNode }) {
         <Link to="/">Home</Link>
         |
         <Link to="/about">About</Link>
+        |
+        <Link to="/with-server">With Server</Link>
       </nav>
     </header>
     <hr />

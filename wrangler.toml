@@ -1,3 +1,4 @@
+name = "remix-d1-drizzle"
 compatibility_date = "2023-04-30"
 compatibility_flags = ["streams_enable_constructors"]
 
