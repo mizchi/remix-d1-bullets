@@ -33,6 +33,9 @@ devDependencies:
   '@remix-run/eslint-config':
     specifier: ^1.15.0
     version: 1.15.0(eslint@8.38.0)(react@18.2.0)(typescript@4.9.5)
+  '@remix-run/node':
+    specifier: ^1.15.0
+    version: 1.15.0
   '@types/node':
     specifier: ^18.16.3
     version: 18.16.3
@@ -57,6 +60,15 @@ devDependencies:
   npm-run-all:
     specifier: ^4.1.5
     version: 4.1.5
+  remix-auth:
+    specifier: ^3.4.0
+    version: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+  remix-auth-form:
+    specifier: ^1.3.0
+    version: 1.3.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0)
+  remix-auth-google:
+    specifier: ^1.2.0
+    version: 1.2.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0)
   typescript:
     specifier: ^4.9.5
     version: 4.9.5
@@ -2267,6 +2279,21 @@ packages:
       - supports-color
     dev: true
 
+  /@remix-run/node@1.15.0:
+    resolution: {integrity: sha512-CS0p8T6A2KvMoAW5zzLA/BtNNCsv34A5RJoouJvXK9/o6MriAQ/YSugg6ldS5mec49neSep+CGeL1RS6tL+3NQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@remix-run/server-runtime': 1.15.0
+      '@remix-run/web-fetch': 4.3.4
+      '@remix-run/web-file': 3.0.2
+      '@remix-run/web-stream': 1.0.3
+      '@web3-storage/multipart-parser': 1.0.0
+      abort-controller: 3.0.0
+      cookie-signature: 1.2.1
+      source-map-support: 0.5.21
+      stream-slice: 0.1.2
+    dev: true
+
   /@remix-run/react@1.15.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-S0RuIeHvQTqryCZ3KVl8EsIWCqL6/ky1/kmDpN2n5Pdjew2BLC6DX7OdrY1ZQjbzOMHAROsZlyaSSVXCItunag==}
     engines: {node: '>=14'}
@@ -2279,7 +2306,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       react-router-dom: 6.10.0(react-dom@18.2.0)(react@18.2.0)
       use-sync-external-store: 1.2.0(react@18.2.0)
-    dev: false
 
   /@remix-run/router@1.5.0:
     resolution: {integrity: sha512-bkUDCp8o1MvFO+qxkODcbhSqRa6P2GXgrGZVpt0dCXNW2HCSCqYI0ZoAqEOSAjRWmmlKcYgFvN4B4S+zo/f8kg==}
@@ -2296,6 +2322,44 @@ packages:
       cookie: 0.4.2
       set-cookie-parser: 2.6.0
       source-map: 0.7.4
+
+  /@remix-run/web-blob@3.0.4:
+    resolution: {integrity: sha512-AfegzZvSSDc+LwnXV+SwROTrDtoLiPxeFW+jxgvtDAnkuCX1rrzmVJ6CzqZ1Ai0bVfmJadkG5GxtAfYclpPmgw==}
+    dependencies:
+      '@remix-run/web-stream': 1.0.3
+      web-encoding: 1.1.5
+    dev: true
+
+  /@remix-run/web-fetch@4.3.4:
+    resolution: {integrity: sha512-AUM1XBa4hcgeNt2CD86OlB5aDLlqdMl0uJ+89R8dPGx07I5BwMXnbopCaPAkvSBIoHeT/IoLWIuZrLi7RvXS+Q==}
+    engines: {node: ^10.17 || >=12.3}
+    dependencies:
+      '@remix-run/web-blob': 3.0.4
+      '@remix-run/web-form-data': 3.0.4
+      '@remix-run/web-stream': 1.0.3
+      '@web3-storage/multipart-parser': 1.0.0
+      abort-controller: 3.0.0
+      data-uri-to-buffer: 3.0.1
+      mrmime: 1.0.1
+    dev: true
+
+  /@remix-run/web-file@3.0.2:
+    resolution: {integrity: sha512-eFC93Onh/rZ5kUNpCQersmBtxedGpaXK2/gsUl49BYSGK/DvuPu3l06vmquEDdcPaEuXcsdGP0L7zrmUqrqo4A==}
+    dependencies:
+      '@remix-run/web-blob': 3.0.4
+    dev: true
+
+  /@remix-run/web-form-data@3.0.4:
+    resolution: {integrity: sha512-UMF1jg9Vu9CLOf8iHBdY74Mm3PUvMW8G/XZRJE56SxKaOFWGSWlfxfG+/a3boAgHFLTkP7K4H1PxlRugy1iQtw==}
+    dependencies:
+      web-encoding: 1.1.5
+    dev: true
+
+  /@remix-run/web-stream@1.0.3:
+    resolution: {integrity: sha512-wlezlJaA5NF6SsNMiwQnnAW6tnPzQ5I8qk0Y0pSohm0eHKa2FQ1QhEKLVVcDDu02TmkfHgnux0igNfeYhDOXiA==}
+    dependencies:
+      web-streams-polyfill: 3.2.1
+    dev: true
 
   /@rollup/pluginutils@4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -2666,6 +2730,19 @@ packages:
 
   /@web3-storage/multipart-parser@1.0.0:
     resolution: {integrity: sha512-BEO6al7BYqcnfX15W2cnGR+Q566ACXAT9UQykORCWW80lmkpWsnEob6zJS1ZVBKsSJC8+7vJkHwlp+lXG1UCdw==}
+
+  /@zxing/text-encoding@0.9.0:
+    resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /abort-controller@3.0.0:
+    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
+    engines: {node: '>=6.5'}
+    dependencies:
+      event-target-shim: 5.0.1
+    dev: true
 
   /accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -3274,6 +3351,11 @@ packages:
 
   /cookie-signature@1.0.6:
     resolution: {integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==}
+    dev: true
+
+  /cookie-signature@1.2.1:
+    resolution: {integrity: sha512-78KWk9T26NhzXtuL26cIJ8/qNHANyJ/ZYrmEXFzUmhZdjpBv+DlWlOANRTGBt48YcyslsLrj0bMLFTmXvLRCOw==}
+    engines: {node: '>=6.6.0'}
     dev: true
 
   /cookie@0.4.2:
@@ -4594,6 +4676,11 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
+  /event-target-shim@5.0.1:
+    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
+    engines: {node: '>=6'}
+    dev: true
+
   /execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -5457,6 +5544,13 @@ packages:
   /is-fullwidth-code-point@3.0.0:
     resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
     engines: {node: '>=8'}
+    dev: true
+
+  /is-generator-function@1.0.10:
+    resolution: {integrity: sha512-jsEjy9l3yiXEQ+PsXdmBwEPcOxaXWLspKdplFUVI9vq1iZgIekeC0L167qeu86czQaxed3q/Uzuw0swL0irL8A==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      has-tostringtag: 1.0.0
     dev: true
 
   /is-glob@4.0.3:
@@ -6515,6 +6609,11 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /mrmime@1.0.1:
+    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
+    engines: {node: '>=10'}
+    dev: true
+
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: true
@@ -7301,7 +7400,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -7327,7 +7425,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-router: 6.10.0(react@18.2.0)
-    dev: false
 
   /react-router@6.10.0(react@18.2.0):
     resolution: {integrity: sha512-Nrg0BWpQqrC3ZFFkyewrflCud9dio9ME3ojHCF/WLsprJVzkq3q3UeEhMCAW1dobjeGbWgjNn/PVF6m46ANxXQ==}
@@ -7337,7 +7434,6 @@ packages:
     dependencies:
       '@remix-run/router': 1.5.0
       react: 18.2.0
-    dev: false
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -7493,6 +7589,54 @@ packages:
       unified: 10.1.2
     dev: true
 
+  /remix-auth-form@1.3.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0):
+    resolution: {integrity: sha512-m+pwFJM61+qGPIvROHmN7LANJMbpL2QgYen/wY8wnJfwwannWt2+7zEoGWF7NbxMnoxCib75EGlPZpyyvwtBXQ==}
+    peerDependencies:
+      '@remix-run/server-runtime': ^1.0.0
+      remix-auth: ^3.4.0
+    dependencies:
+      '@remix-run/server-runtime': 1.15.0
+      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+    dev: true
+
+  /remix-auth-google@1.2.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0):
+    resolution: {integrity: sha512-llyrtOt8vk503XlAoEdGuEmrHRACFOP13yPVn92VkrcogTUyALzuy8ky2O1/FSJ7Q2+B0di5yMiCF4IYD/Yn4g==}
+    peerDependencies:
+      '@remix-run/server-runtime': ^1.1.1
+      remix-auth: ^3.2.1
+    dependencies:
+      '@remix-run/server-runtime': 1.15.0
+      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+      remix-auth-oauth2: 1.6.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0)
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /remix-auth-oauth2@1.6.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0):
+    resolution: {integrity: sha512-HnMgdKn/+LIKHYlbxys14g9cUMGvzMS9mbopAfnntIYWBC8MOfUy6uYyyoWJNqm3HriAE/MiEUaTnlz3B0c7uQ==}
+    peerDependencies:
+      '@remix-run/server-runtime': ^1.0.0
+      remix-auth: ^3.2.2
+    dependencies:
+      '@remix-run/server-runtime': 1.15.0
+      debug: 4.3.4
+      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+      uuid: 8.3.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /remix-auth@3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0):
+    resolution: {integrity: sha512-VRliJo9VRAS4sSYgMjYbi7rYRixPWU2Tb8PFZb06OIj0nONK/1KRzHf2+Y6VGZeIacepLVgan6g2IUJjayE2rQ==}
+    peerDependencies:
+      '@remix-run/react': ^1.0.0
+      '@remix-run/server-runtime': ^1.0.0
+    dependencies:
+      '@remix-run/react': 1.15.0(react-dom@18.2.0)(react@18.2.0)
+      '@remix-run/server-runtime': 1.15.0
+      uuid: 8.3.2
+    dev: true
+
   /require-like@0.1.2:
     resolution: {integrity: sha512-oyrU88skkMtDdauHDuKVrgR+zuItqr6/c//FXzvmxRGMexSDc6hNvJInGW3LL46n+8b50RykrvwSUIIQH2LQ5A==}
     dev: true
@@ -7632,7 +7776,6 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /selfsigned@2.1.1:
     resolution: {integrity: sha512-GSL3aowiF7wa/WtSFwnUrludWFoNhftq8bUkH9pkzjpN2XSPOAYEgg6e0sS9s0rZwgJzJiQRPU18A6clnoW5wQ==}
@@ -7885,6 +8028,10 @@ packages:
 
   /stream-shift@1.0.1:
     resolution: {integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==}
+    dev: true
+
+  /stream-slice@0.1.2:
+    resolution: {integrity: sha512-QzQxpoacatkreL6jsxnVb7X5R/pGw9OUv2qWTYWnmLpg4NdN31snPy/f3TdQE1ZUXaThRvj1Zw4/OGg0ZkaLMA==}
     dev: true
 
   /streamsearch@1.1.0:
@@ -8403,15 +8550,29 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
-    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
+  /util@0.12.5:
+    resolution: {integrity: sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==}
+    dependencies:
+      inherits: 2.0.4
+      is-arguments: 1.1.1
+      is-generator-function: 1.0.10
+      is-typed-array: 1.1.10
+      which-typed-array: 1.1.9
+    dev: true
+
   /utils-merge@1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
+    dev: true
+
+  /uuid@8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
     dev: true
 
   /uvu@0.5.6:
@@ -8536,6 +8697,19 @@ packages:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}
     dependencies:
       defaults: 1.0.4
+    dev: true
+
+  /web-encoding@1.1.5:
+    resolution: {integrity: sha512-HYLeVCdJ0+lBYV2FvNZmv3HJ2Nt0QYXqZojk3d9FJOLkwnuhzM9tmamh8d7HPM8QqjKH8DeHkFTx+CFlWpZZDA==}
+    dependencies:
+      util: 0.12.5
+    optionalDependencies:
+      '@zxing/text-encoding': 0.9.0
+    dev: true
+
+  /web-streams-polyfill@3.2.1:
+    resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
+    engines: {node: '>= 8'}
     dev: true
 
   /webidl-conversions@3.0.1:

@@ -2,7 +2,18 @@ name = "remix-d1-drizzle"
 compatibility_date = "2023-04-30"
 compatibility_flags = ["streams_enable_constructors"]
 
+kv_namespaces = [
+  # remix_d1_drizzle_session_kv / remix_d1_drizzle_session_kv_preview
+  { binding = "SESSION_KV", id = "8fbf86533def4c50831da8a34d29bdd4", preview_id = "9fdbff8228454a6a9cf2ed0aea127cb4" }
+]
+
 [[ d1_databases ]]
 binding = "DB"
 database_name = "dzltest"
 database_id = "ab8b338d-2bdb-4c24-9f8e-1095dc814506"
+
+[vars]
+GOOGLE_AUTH_CALLBACK_URL="http://localhost:8788/auth/google/callback"
+
+[env.production.vars]
+GOOGLE_AUTH_CALLBACK_URL="https://remix-d1-drizzle.pages.dev/auth/google/callback"
