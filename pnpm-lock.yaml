@@ -62,19 +62,19 @@ devDependencies:
     version: 4.1.5
   remix-auth:
     specifier: ^3.4.0
-    version: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+    version: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.16.0)
   remix-auth-form:
     specifier: ^1.3.0
-    version: 1.3.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0)
+    version: 1.3.0(@remix-run/server-runtime@1.16.0)(remix-auth@3.4.0)
   remix-auth-google:
     specifier: ^1.2.0
-    version: 1.2.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0)
+    version: 1.2.0(@remix-run/server-runtime@1.16.0)(remix-auth@3.4.0)
   typescript:
     specifier: ^4.9.5
     version: 4.9.5
   wrangler:
-    specifier: ^2.15.1
-    version: 2.15.1
+    specifier: ^2.19.0
+    version: 2.19.0
 
 packages:
 
@@ -2311,6 +2311,11 @@ packages:
     resolution: {integrity: sha512-bkUDCp8o1MvFO+qxkODcbhSqRa6P2GXgrGZVpt0dCXNW2HCSCqYI0ZoAqEOSAjRWmmlKcYgFvN4B4S+zo/f8kg==}
     engines: {node: '>=14'}
 
+  /@remix-run/router@1.6.0:
+    resolution: {integrity: sha512-N13NRw3T2+6Xi9J//3CGLsK2OqC8NMme3d/YX+nh05K9YHWGcv8DycHJrqGScSP4T75o8IN6nqIMhVFU8ohg8w==}
+    engines: {node: '>=14'}
+    dev: true
+
   /@remix-run/server-runtime@1.15.0:
     resolution: {integrity: sha512-DL9xjHfYYrEcOq5VbhYtrjJUWo/nFQAT7Y+Np/oC55HokyU6cb2jGhl52nx96aAxKwaFCse5N90GeodFsRzX7w==}
     engines: {node: '>=14'}
@@ -2322,6 +2327,17 @@ packages:
       cookie: 0.4.2
       set-cookie-parser: 2.6.0
       source-map: 0.7.4
+
+  /@remix-run/server-runtime@1.16.0:
+    resolution: {integrity: sha512-a8rfS2SJ2nWhyGikXo+uknOSl1gW1/maDYuiG4Ki2wbVmF0v5mhJhlyB+1l+BjvXw+ZTS9HIiSQkg6L6JWqEcQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@remix-run/router': 1.6.0
+      '@web3-storage/multipart-parser': 1.0.0
+      cookie: 0.4.2
+      set-cookie-parser: 2.6.0
+      source-map: 0.7.4
+    dev: true
 
   /@remix-run/web-blob@3.0.4:
     resolution: {integrity: sha512-AfegzZvSSDc+LwnXV+SwROTrDtoLiPxeFW+jxgvtDAnkuCX1rrzmVJ6CzqZ1Ai0bVfmJadkG5GxtAfYclpPmgw==}
@@ -7589,51 +7605,51 @@ packages:
       unified: 10.1.2
     dev: true
 
-  /remix-auth-form@1.3.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0):
+  /remix-auth-form@1.3.0(@remix-run/server-runtime@1.16.0)(remix-auth@3.4.0):
     resolution: {integrity: sha512-m+pwFJM61+qGPIvROHmN7LANJMbpL2QgYen/wY8wnJfwwannWt2+7zEoGWF7NbxMnoxCib75EGlPZpyyvwtBXQ==}
     peerDependencies:
       '@remix-run/server-runtime': ^1.0.0
       remix-auth: ^3.4.0
     dependencies:
-      '@remix-run/server-runtime': 1.15.0
-      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+      '@remix-run/server-runtime': 1.16.0
+      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.16.0)
     dev: true
 
-  /remix-auth-google@1.2.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0):
+  /remix-auth-google@1.2.0(@remix-run/server-runtime@1.16.0)(remix-auth@3.4.0):
     resolution: {integrity: sha512-llyrtOt8vk503XlAoEdGuEmrHRACFOP13yPVn92VkrcogTUyALzuy8ky2O1/FSJ7Q2+B0di5yMiCF4IYD/Yn4g==}
     peerDependencies:
       '@remix-run/server-runtime': ^1.1.1
       remix-auth: ^3.2.1
     dependencies:
-      '@remix-run/server-runtime': 1.15.0
-      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
-      remix-auth-oauth2: 1.6.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0)
+      '@remix-run/server-runtime': 1.16.0
+      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.16.0)
+      remix-auth-oauth2: 1.6.0(@remix-run/server-runtime@1.16.0)(remix-auth@3.4.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /remix-auth-oauth2@1.6.0(@remix-run/server-runtime@1.15.0)(remix-auth@3.4.0):
+  /remix-auth-oauth2@1.6.0(@remix-run/server-runtime@1.16.0)(remix-auth@3.4.0):
     resolution: {integrity: sha512-HnMgdKn/+LIKHYlbxys14g9cUMGvzMS9mbopAfnntIYWBC8MOfUy6uYyyoWJNqm3HriAE/MiEUaTnlz3B0c7uQ==}
     peerDependencies:
       '@remix-run/server-runtime': ^1.0.0
       remix-auth: ^3.2.2
     dependencies:
-      '@remix-run/server-runtime': 1.15.0
+      '@remix-run/server-runtime': 1.16.0
       debug: 4.3.4
-      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0)
+      remix-auth: 3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.16.0)
       uuid: 8.3.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /remix-auth@3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.15.0):
+  /remix-auth@3.4.0(@remix-run/react@1.15.0)(@remix-run/server-runtime@1.16.0):
     resolution: {integrity: sha512-VRliJo9VRAS4sSYgMjYbi7rYRixPWU2Tb8PFZb06OIj0nONK/1KRzHf2+Y6VGZeIacepLVgan6g2IUJjayE2rQ==}
     peerDependencies:
       '@remix-run/react': ^1.0.0
       '@remix-run/server-runtime': ^1.0.0
     dependencies:
       '@remix-run/react': 1.15.0(react-dom@18.2.0)(react@18.2.0)
-      '@remix-run/server-runtime': 1.15.0
+      '@remix-run/server-runtime': 1.16.0
       uuid: 8.3.2
     dev: true
 
@@ -8777,8 +8793,8 @@ packages:
     resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
     dev: true
 
-  /wrangler@2.15.1:
-    resolution: {integrity: sha512-nGcvyE6rStlPFiK8Uz2sB+Z6DyaVfThLYvKa6LfCsM5rN1C/3+flb3qp3DeEkFs09lLdSW0nAeaZavGkZSczvA==}
+  /wrangler@2.19.0:
+    resolution: {integrity: sha512-/XykXkD7dtvBMWq2p84V/aHhkifZA15+HBD7nm/pV62s6MJrJ+DWd1QJB7CF2D7DqknBLxdWpmmZB6YCo0BtMw==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
