@@ -8,7 +8,7 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <Layout>
-      <h2>Home1</h2>
+      <h2>Home</h2>
     </Layout>
   );
 }

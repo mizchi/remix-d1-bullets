@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "NODE_ENV=development npm-run-all build --parallel dev:*",
     "dev:remix": "remix watch",
-    "dev:wrangler": "wrangler pages dev ./public --persist",
+    "dev:wrangler": "wrangler pages dev ./public --persist --no-bundle",
     "build": "remix build",
     "build:prod": "NODE_ENV=production remix build",
     "start": "NODE_ENV=production wrangler pages dev ./public",

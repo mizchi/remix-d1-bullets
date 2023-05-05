@@ -15,7 +15,7 @@ export type AuthUser = {
 
 let _authenticator: Authenticator<AuthUser> | undefined;
 export function getAuthenticator(context: AppLoadContext): Authenticator<AuthUser> {
-  console.log('[auth] getAuthenticator', 'context', context);
+  // console.log('[auth] getAuthenticator', 'context', context);
   if (_authenticator == null) {
     // const cookie = createSessionCookie(context);
     const cookie = createCookie("__session", {
@@ -25,6 +25,7 @@ export function getAuthenticator(context: AppLoadContext): Authenticator<AuthUse
       httpOnly: true,
       secure: process.env.NODE_ENV ==  "production",
     });
+    console.log('[auth.server] cookie', cookie);
     const sessionStorage = createWorkersKVSessionStorage({
       kv: context.SESSION_KV as KVNamespace,
       cookie

@@ -9,12 +9,13 @@ import { Layout } from "../components/Layout";
 export async function loader({ request, context }: LoaderArgs) {
   const authenticator = getAuthenticator(context);
   const user = await authenticator.isAuthenticated(request);
+  throw new Error("This is an error");
   return json({
     user,
   });
 };
 
-export default function Login() {
+export default function ErrorPage() {
   const { user } = useLoaderData<typeof loader>();
 
   if (user) {
