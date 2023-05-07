@@ -5,43 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1682755917462,
-      "tag": "0000_acoustic_doorman",
-      "breakpoints": false
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1682781415054,
-      "tag": "0001_cuddly_squadron_supreme",
-      "breakpoints": false
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1683271931345,
-      "tag": "0002_wet_mauler",
-      "breakpoints": false
-    },
-    {
-      "idx": 3,
-      "version": "5",
-      "when": 1683378993474,
-      "tag": "0003_curly_shadow_king",
-      "breakpoints": false
-    },
-    {
-      "idx": 4,
-      "version": "5",
-      "when": 1683379161195,
-      "tag": "0004_chief_miracleman",
-      "breakpoints": false
-    },
-    {
-      "idx": 5,
-      "version": "5",
-      "when": 1683390440605,
-      "tag": "0005_mushy_quicksilver",
+      "when": 1683450767302,
+      "tag": "0000_conscious_ironclad",
       "breakpoints": false
     }
   ]

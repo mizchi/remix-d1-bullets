@@ -7,10 +7,6 @@ export function Layout(props: { children: React.ReactNode }) {
         <nav>
           <Link to="/">Home</Link>
           |
-          <Link to="/about">About</Link>
-          |
-          <Link to="/with-server">With Server</Link>
-          |
           <Link to="/login">Login</Link>
         </nav>
       </header>

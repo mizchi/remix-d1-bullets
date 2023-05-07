@@ -9,7 +9,6 @@ export default async function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
-  // console.log('handleRequest=====', request.url);
   const body = await renderToReadableStream(
     <RemixServer context={remixContext} url={request.url} />,
     {

@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    branches: [ release/* ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: corepack enable pnpm
+      - run: pnpm install --frozen-lockfile
+      # setup cloudflare wrangler
+      - run: pnpm wrangler d1 migrations apply dzltest
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - run: pnpm build:prod
+      - run: pnpm wrangler pages publish ./publish
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

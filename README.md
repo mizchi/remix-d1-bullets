@@ -1,19 +1,22 @@
-# Welcome to Remix!
+# remix-d1-bullets
 
-- [Remix Docs](https://remix.run/docs)
+My silver bullets.
 
-## Development
+## Stack
 
-Put `.dev.vars`
+- cloudflare-pages-functions
+- remix | `@remix-run/cloudflare-pages`
+- remix-auth | Google OAuth
+- D1 | DrizzleORM
+- GitHub Actions CI and Release
 
-```sh
-cp .dev.vars.example .dev.vars
-pnpm dev
-```
+## How to develop
 
-## Deployment
+- [Setup](docs/01_setup.md)
+- [Release](docs/02_d1_migration.md)
 
-```bash
-$ pnpm wrangler secret put GOOGLE_AUTH_CLIENT_ID
-$ pnpm wrangler secret put GOOGLE_AUTH_CLIENT_SECRET
-```
+If you want to know thin project from scratch, see [how it generate](docs/00_how_it_generate.md)
+
+## LICENSE
+
+MIT
