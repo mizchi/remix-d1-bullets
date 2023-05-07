@@ -7,7 +7,8 @@ My silver bullets.
 - cloudflare-pages-functions
 - remix | `@remix-run/cloudflare-pages`
 - remix-auth | Google OAuth
-- D1 | DrizzleORM
+- remix-validated-form + zod
+- D1 + DrizzleORM
 - GitHub Actions CI and Release
 
 ## How to develop
