@@ -1,3 +1,7 @@
+/*
+ * This is an example of using remix-validated-form and zod
+ * If you drop this libraries, bundle size will be reduced by -100kb. (400kb to 300kb at first)
+*/
 import { DataFunctionArgs, json } from "@remix-run/cloudflare";
 import { useActionData } from "@remix-run/react";
 import { withZod } from "@remix-validated-form/with-zod";
@@ -39,18 +43,23 @@ export const action = async ({
   });
 };
 
-export default function Demo() {
+export default function ValidatedFormExample() {
   const data = useActionData();
   return (
-    <ValidatedForm validator={validator} method="post">
-      <InputWithLabel name="firstName" label="First Name" />
-      <InputWithLabel name="lastName" label="Last Name" />
-      <InputWithLabel name="email" label="Email" />
-      {data && (
-        <pre>{JSON.stringify(data)}</pre>
-      )}
-      <SubmitButton />
-    </ValidatedForm>
+    <>
+      <p>
+        This is remix-validated-form example
+      </p>
+      <ValidatedForm validator={validator} method="post">
+        <InputWithLabel name="firstName" label="First Name" />
+        <InputWithLabel name="lastName" label="Last Name" />
+        <InputWithLabel name="email" label="Email" />
+        {data && (
+          <pre>{JSON.stringify(data)}</pre>
+        )}
+        <SubmitButton />
+      </ValidatedForm>
+    </>
   );
 }
 
