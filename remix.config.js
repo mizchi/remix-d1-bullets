@@ -1,5 +1,6 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
+  v2_headers: true,
   devServerBroadcastDelay: 1000,
   ignoredRouteFiles: ["**/.*"],
   server: "./server.ts",
