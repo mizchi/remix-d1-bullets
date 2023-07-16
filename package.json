@@ -5,12 +5,12 @@
     "prepare": "panda codegen",
     "dev": "NODE_ENV=development npm-run-all build --parallel dev:*",
     "dev:remix": "remix watch",
+    "dev:panda": "panda codegen --watch",
     "dev:wrangler": "wrangler pages dev ./public",
     "build": "remix build",
     "build:prod": "NODE_ENV=production remix build",
     "start": "NODE_ENV=production wrangler pages dev ./public",
     "start2": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
-
     "typecheck": "tsc -p . --noEmit",
     "gen:migrate": "drizzle-kit generate:sqlite --out migrations --schema app/schema.ts",
     "release": "pnpm build:prod && wrangler pages publish ./public"
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230710.1",
     "@pandacss/dev": "^0.6.0",
+    "@radix-ui/react-popover": "^1.0.6",
     "@remix-run/dev": "^1.18.1",
     "@remix-run/eslint-config": "^1.18.1",
     "@remix-run/node": "^1.18.1",
