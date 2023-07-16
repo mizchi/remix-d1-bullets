@@ -5,10 +5,12 @@ My silver bullets.
 ## Stack
 
 - cloudflare-pages-functions
-- remix | `@remix-run/cloudflare-pages`
+- remix + `@remix-run/cloudflare-pages`
 - remix-auth | Google OAuth
 - remix-validated-form + zod
 - D1 + DrizzleORM
+- panda-css
+- radix-ui
 - GitHub Actions CI and Release
 
 ## How to develop
