@@ -1,6 +1,5 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  v2_headers: true,
   devServerBroadcastDelay: 1000,
   ignoredRouteFiles: ["**/.*"],
   server: "./server.ts",
@@ -12,9 +11,11 @@ module.exports = {
   serverModuleFormat: "esm",
   serverPlatform: "neutral",
   future: {
+    v2_headers: true,
     v2_errorBoundary: true,
     v2_meta: true,
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
+  postcss: true
 };

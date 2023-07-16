@@ -6,6 +6,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { LinksFunction } from "@remix-run/cloudflare";
+import styles from './index.css';
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
 export default function App() {
   return (

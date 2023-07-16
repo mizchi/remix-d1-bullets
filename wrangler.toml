@@ -1,5 +1,5 @@
-compatibility_date = "2023-05-07"
-compatibility_flags = ["streams_enable_constructors"]
+compatibility_date = "2023-07-10"
+compatibility_flags = []
 
 # kv_namespaces = [
 #   {binding = "SESSION_KV", id = "...", preview_id = "..." }
